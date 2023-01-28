@@ -80,6 +80,7 @@ position: relative;
     position: absolute;
     bottom: 20px;
     right: 30%;
+    transition-duration: 0.4s;
 }
 
 .servicesbutton:hover {
@@ -87,7 +88,6 @@ position: relative;
     border:  2px solid #2b2d42;
     color: #2b2d42;
     font-family: 'Lucida Console', Courier, monospace;
-    transition-duration: 0.4s;
 }
 
 .footer {
