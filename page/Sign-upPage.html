@@ -9,6 +9,7 @@
         integrity="sha384-GLhlTQ8iRABdZLl6O3oVMWSktQOp6b7In1Zl3/Jr59b6EGGoI1aFkw7cmDA6j6gD" crossorigin="anonymous">
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
     <link rel="stylesheet" type="text/css" href="CSS/Login-Page.css">
+    <script src="./JavaScript/SignUp.js" defer></script>
 </head>
 
 <body class="container">
@@ -20,23 +21,28 @@
                         <button class="btn btn-secondary"><i class="fa fa-backward"></i></button>
                     </div>
                     <div class="text">
-                        <h1>Login</h1>
+                        <h1>SignUp</h1>
                     </div>
                 </div>
-                <form action="#">
+                <form action=""  method="post">
+                    <div class="form-group">
+                        <label for="UserName">User Name</label>
+                        <input type="text" class="form-control" id="UserName"
+                            placeholder="Your Name Here" required> <br>
+                    </div>
                     <div class="form-group">
                         <label for="Email">Email</label>
                         <input type="email" class="form-control" id="Email" aria-describedby="emailHelp"
-                            placeholder="Email@domain.com"> <br>
+                            placeholder="Email@domain.com" required> <br>
                     </div>
                     <div class="form-group">
                         <label for="Password">Password</label>
-                        <input type="password" class="form-control" id="Password" placeholder="Password"> <br>
+                        <input type="password" class="form-control" id="Password" placeholder="Password" required> <br>
                     </div> <br>
-                    <div class="text-center"><button type="submit" class="btn btn-primary text-center">Login</button>
+                    <div class="text-center"><button type="submit" class="btn btn-primary text-center" id="signup">SignUp</button>
                     </div>
             </div>
-            <div class="text-center"><a href="./Sign-upPage.html"><button type="button" class="btn btn-secondary text-center half">SignUp</button></a>
+            <div class="text-center"><a href="./LoginPage.html"><button type="button" class="btn btn-secondary text-center half" >Login</button></a>
 
                 </form>
             </div>
