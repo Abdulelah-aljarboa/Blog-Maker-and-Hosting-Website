@@ -1,0 +1,132 @@
+header {
+    background-color: #2b2d42;    
+     /* c7efcf */
+    padding-top: 10px;     
+    height: 60px;
+}
+#navfont {
+    color: #ffffff;
+    font-family: 'Lucida Console', Courier, monospace;
+
+    }
+
+.pageheigh {
+    height: 100%;
+    /* margin-bottom: 0; */
+}
+
+.services {
+    background-color: #2b2d42;
+
+}
+
+.surveyFormBox {
+    border-radius: 5px;
+    margin: 20px 0px 40px 0px;
+    padding: 10px 0 20px 0px;
+    background-color: #dfdfdf;
+    width: 60%;
+    height: 300px;
+    position: relative;
+
+}
+.surveyBoxContent {
+    margin: 20px 0px 40px 50px;
+    padding: 10px 0 20px 0px;    position: relative;
+}
+.surveyTitleBox {
+    border-radius: 5px;
+    margin: 20px 0px 40px 0px;
+    padding: 20px 0 20px 0px;
+    background-color: #dfdfdf;
+    width: 60%;
+    height: 100px;
+    position: relative;
+
+}
+
+
+
+.submitButton {
+    background-color: #2b2d42;
+    font-family: 'Lucida Console', Courier, monospace;
+    color: white;
+    border-color: #2b2d42;
+    border-radius: 2px;
+    width: 30%;
+    position: relative;
+    bottom: 45%;
+}
+.submitButton:hover {
+    background-color: #ffffff;
+    border:  2px solid #2b2d42;
+    color: #2b2d42;
+    font-family: 'Lucida Console', Courier, monospace;
+    transition-duration: 0.4s;
+}
+
+.footer {
+    background-color: #2b2d42;
+    height: 75px;
+}
+
+.footertextbox {
+    width: 150%;
+}
+
+.newsletternbutton {
+    background-color: #2b2d42;
+    border: 1px solid #ffffff;
+     border-radius: 2px;
+     font-family: 'Lucida Console', Courier, monospace;
+     color: #ffffff;
+     width: 60%;
+     height: 40px;
+     transition-duration: 0.4s;
+     position: relative;
+     left: 50px;
+}
+
+.footertext {
+    color: white;
+    font-family: 'Lucida Console', Courier, monospace;
+    text-decoration: none;
+}
+
+.surveyImage{
+    width: 80%;
+    height: 50%;
+}
+.surveyImage img{
+    width: 100%;
+    height: 100%;
+}
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+/* #logo {
+    margin: 10px;
+} */
+    /* #nav1 {
+        background-color: bisque;
+        border-radius: 20px;
+        height: 30px;
+        width: 100px;
+        
+    } */
+
