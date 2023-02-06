@@ -1,0 +1,151 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <title>Survey One</title>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0-alpha1/dist/css/bootstrap.min.css" rel="stylesheet"
+        integrity="sha384-GLhlTQ8iRABdZLl6O3oVMWSktQOp6b7In1Zl3/Jr59b6EGGoI1aFkw7cmDA6j6gD" crossorigin="anonymous">
+    <link rel="stylesheet" type="text/css" href="CSS\Survey-form-style.css">
+</head>
+
+<body id="first">
+    <header>
+        <div class="row">
+            <div class="col ">
+                <ul class="nav justify-content-left">
+                    <li class="nav-item"><a class="nav-link" href="Home.html" id="navfont">public survey</a></li>
+                </ul>
+            </div>
+
+            <div class="col">
+                <ul class="nav justify-content-center">
+                    <li class="nav-item"><a class="nav-link active" href="Home.html" id="navfont">Home</a></li>
+                    <li class="nav-item"><a class="nav-link active" href="Survey-page.html" id="navfont">Survey</a></li>
+                    <li class="nav-item"><a class="nav-link active" href="About-usPage.html" id="navfont">About us</a></li>
+                </ul>
+            </div>
+
+            <div class="col">
+                <ul class="nav justify-content-end">
+                    <li class="nav-item"><a class="nav-link active" href="#" id="navfont">Login</a></li>
+                </ul>
+            </div>
+        </div>
+    </header>
+
+    <form>
+
+        <div class="row">
+            <div class="col" align="center">
+                <div class="surveyTitleBox">
+                    <h1> Form 1 </h1>
+                </div>
+            </div>
+        </div>
+        <div class="row">
+            <div class="col" align="center">
+                <div class="surveyFormBox" align="left">
+                    <div class="surveyBoxContent">
+                        <h3>What is your favorite Web language :</h3><br>
+                        <input type="radio" id="html" name="fav_language" value="HTML">
+                        <label for="html">HTML</label><br>
+                        <input type="radio" id="css" name="fav_language" value="CSS">
+                        <label for="css">CSS</label><br>
+                        <input type="radio" id="javascript" name="fav_language" value="JavaScript">
+                        <label for="javascript">JavaScript</label>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <div class="row">
+            <div class="col" align="center">
+                <div class="surveyFormBox" align="left">
+                    <div class="surveyBoxContent">
+                        <h3>How many hours you code a day :</h3><br>
+                        <input type="radio" id="One" name="hours_coding" value="One">
+                        <label for="One">One hour</label><br>
+                        <input type="radio" id="Two" name="hours_coding" value="Two">
+                        <label for="Two">Two hours</label><br>
+                        <input type="radio" id="Three" name="hours_coding" value="Three">
+                        <label for="Three">Three hours</label>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <div class="row">
+            <div class="col" align="center">
+                <div class="surveyFormBox" align="left">
+                    <div class="surveyBoxContent">
+                        <h3>What is your salary :</h3><br>
+                        <input type="radio" id="50k" name="salary" value="50k">
+                        <label for="50k">50k Annually</label><br>
+                        <input type="radio" id="80k" name="salary" value="80k">
+                        <label for="80k">80k Annually</label><br>
+                        <input type="radio" id="100k" name="salary" value="100k">
+                        <label for="100k">100k Annually</label><br>
+                        <input type="radio" id="More_Then_100k" name="salary" value="More_Then_100k">
+                        <label for="More_Then_100k">More</label>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <div class="row">
+            <div class="col" align="center">
+                <input type="submit" value="submit" class="submitButton">
+            </div>
+        </div>
+
+    </form>
+
+
+
+
+
+
+
+    <footer class="footer">
+        <header>
+            <div class="row">
+                <div class="col ">
+                    <ul class="nav justify-content-left">
+                        <li class="nav-item"><a class="nav-link" href="Home.html" id="navfont">public survey</a></li>
+                    </ul>
+                </div>
+
+                <div class="col">
+                    <ul class="nav justify-content-center">
+                        <p class="footertext">To contact us send us an email at: <a class="footertext"
+                                href="mailto: xyz@gmail.com">xyz@gmail.com</a></p>
+
+                    </ul>
+                </div>
+
+                <div class="col">
+                    <ul class="nav justify-content-center">
+                        <li class="nav-item">
+                            <form>
+                                <div class="row">
+
+                                    <div class="form-group col justify-content-left">
+                                        <form action="post">
+                                            <input type="text" class="form-control footertextbox"
+                                                id="formGroupExampleInput" placeholder="join the newsletter">
+                                        </form>
+                                    </div>
+
+                                    <div class="col justify-content-end">
+
+                                        <button type="submit" value="submit" class="newsletternbutton">submit</button>
+                                    </div>
+                                </div>
+                        </li>
+                    </ul>
+                </div>
+            </div>
+        </header>
+    </footer>
+</body>
+
+</html>

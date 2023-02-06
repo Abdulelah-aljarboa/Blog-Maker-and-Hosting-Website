@@ -1,0 +1,78 @@
+.footer {
+    position: fixed;
+    left: 0;
+    bottom: 0;
+    width: 100%;
+    color: white;
+    text-align: center;
+  }
+
+  header {
+    background-color: #2b2d42;    
+     /* c7efcf */
+    padding-top: 10px;     
+    height: 60px;
+}
+#navfont {
+    color: #ffffff;
+    font-family: 'Lucida Console', Courier, monospace;
+
+    }
+
+
+    .maintext {
+        font-size: 20pt;
+        padding-top: 40%;
+        color: #2b2d42;
+        text-align: center;
+    }
+    
+    .pageheigh {
+        height: 100%;
+        /* margin-bottom: 0; */
+    }
+    
+    .button1 {
+        background-color: #2b2d42;
+        border: 2px solid #2b2d42;
+        font-family: 'Lucida Console', Courier, monospace;
+         border-radius: 2px;
+         color: #ffffff;
+         width: 100%;
+         transition-duration: 0.4s;
+    }
+    
+    .button1:hover {
+        background-color: #ffffff;
+        border:  2px solid #2b2d42;
+        color: #2b2d42;
+    }
+
+    .footertext {
+        color: white;
+        font-family: 'Lucida Console', Courier, monospace;
+        text-decoration: none;
+    }
+
+    .newsletternbutton {
+        background-color: #2b2d42;
+        border: 1px solid #ffffff;
+         border-radius: 2px;
+         font-family: 'Lucida Console', Courier, monospace;
+         color: #ffffff;
+         width: 60%;
+         height: 40px;
+         transition-duration: 0.4s;
+         position: relative;
+         left: 50px;
+    }
+    .footertextbox {
+        width: 150%;
+    }
+    .imag-container {
+        width: 100%;
+    }
+    .imag-container img {
+        position: relative;
+        padding-top: 50%;
+    }
