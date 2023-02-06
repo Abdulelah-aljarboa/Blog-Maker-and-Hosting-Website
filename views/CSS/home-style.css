@@ -1,14 +1,14 @@
 header {
-    background-color: #2b2d42;    
-     /* c7efcf */
-    padding-top: 10px;     
+    background-color: #2b2d42;
+    padding-top: 10px;
     height: 60px;
 }
+
 #navfont {
     color: #ffffff;
     font-family: 'Lucida Console', Courier, monospace;
 
-    }
+}
 
 .maintext {
     font-size: 20pt;
@@ -26,15 +26,15 @@ header {
     background-color: #2b2d42;
     border: 2px solid #2b2d42;
     font-family: 'Lucida Console', Courier, monospace;
-     border-radius: 2px;
-     color: #ffffff;
-     width: 100%;
-     transition-duration: 0.4s;
+    border-radius: 2px;
+    color: #ffffff;
+    width: 100%;
+    transition-duration: 0.4s;
 }
 
 .button1:hover {
     background-color: #ffffff;
-    border:  2px solid #2b2d42;
+    border: 2px solid #2b2d42;
     color: #2b2d42;
 }
 
@@ -47,10 +47,12 @@ header {
     border-radius: 5px;
     margin: 20px 0px 40px 0px;
     padding: 10px 0 20px 0px;
- background-color: #ffffff;
- width: 90%;
- height: 500px;
-position: relative;
+    background-color: #ffffff;
+    width: 90%;
+    height: 500px;
+    position: relative;
+    border-radius: 10px;
+    box-shadow: 0px 5px 10px black;
 }
 
 .servicestextheadline {
@@ -85,7 +87,7 @@ position: relative;
 
 .servicesbutton:hover {
     background-color: #ffffff;
-    border:  2px solid #2b2d42;
+    border: 2px solid #2b2d42;
     color: #2b2d42;
     font-family: 'Lucida Console', Courier, monospace;
 }
@@ -102,20 +104,24 @@ position: relative;
 .newsletternbutton {
     background-color: #2b2d42;
     border: 1px solid #ffffff;
-     border-radius: 2px;
-     font-family: 'Lucida Console', Courier, monospace;
-     color: #ffffff;
-     width: 60%;
-     height: 40px;
-     transition-duration: 0.4s;
-     position: relative;
-     left: 50px;
+    border-radius: 2px;
+    font-family: 'Lucida Console', Courier, monospace;
+    color: #ffffff;
+    width: 60%;
+    height: 40px;
+    transition-duration: 0.4s;
+    position: relative;
+    left: 50px;
 }
 
 .footertext {
     color: white;
     font-family: 'Lucida Console', Courier, monospace;
     text-decoration: none;
+}
+
+li a:hover {
+    background-color: #222333;
 }
 
 
@@ -138,11 +144,10 @@ position: relative;
 /* #logo {
     margin: 10px;
 } */
-    /* #nav1 {
+/* #nav1 {
         background-color: bisque;
         border-radius: 20px;
         height: 30px;
         width: 100px;
         
     } */
-
