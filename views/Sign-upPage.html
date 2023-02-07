@@ -26,17 +26,17 @@
                 <form action="api/user/store" method="POST">
                     <div class="form-group">
                         <label for="UserName">User Name</label>
-                        <input type="text" class="form-control" id="UserName" placeholder="Your Name Here" required>
+                        <input type="text" class="form-control" id="UserName" name="username" placeholder="Your Name Here" required>
                         <br>
                     </div>
                     <div class="form-group">
                         <label for="Email">Email</label>
-                        <input type="email" class="form-control" id="Email" aria-describedby="emailHelp"
+                        <input type="email" class="form-control" id="Email" name="email" aria-describedby="emailHelp"
                             placeholder="Email@domain.com" required> <br>
                     </div>
                     <div class="form-group">
                         <label for="Password">Password</label>
-                        <input type="password" class="form-control" id="Password" placeholder="Password" required> <br>
+                        <input type="password" class="form-control" id="Password" name="password" placeholder="Password" required> <br>
                     </div> <br>
                     <div class="text-center"><button type="submit" class="btn btn-primary text-center"
                             id="signup">SignUp</button>
