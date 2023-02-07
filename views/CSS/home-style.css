@@ -4,10 +4,15 @@ header {
     height: 60px;
 }
 
-#navfont {
+.font {
     color: #ffffff;
     font-family: 'Lucida Console', Courier, monospace;
 
+}
+
+.font a:hover {
+    color: #ffffff;
+    font-family: 'Lucida Console', Courier, monospace;
 }
 
 .maintext {

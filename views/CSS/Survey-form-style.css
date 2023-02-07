@@ -6,10 +6,19 @@ header {
     margin-bottom: 50px;
 }
 
-#navfont {
+.font {
     color: #ffffff;
     font-family: 'Lucida Console', Courier, monospace;
 
+}
+
+.font a:hover {
+    color: #ffffff;
+    font-family: 'Lucida Console', Courier, monospace;
+}
+
+li a:hover {
+    background-color: #222333;
 }
 
 .pageheigh {
