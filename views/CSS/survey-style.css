@@ -1,6 +1,9 @@
+* {
+    font-family: cairo;
+}
+
 header {
     background-color: #2b2d42;
-    /* c7efcf */
     padding-top: 10px;
     height: 60px;
     margin-bottom: 50px;
@@ -8,13 +11,10 @@ header {
 
 .font {
     color: #ffffff;
-    font-family: 'Lucida Console', Courier, monospace;
-
 }
 
 .font a:hover {
     color: #ffffff;
-    font-family: 'Lucida Console', Courier, monospace;
 }
 
 li a:hover {
@@ -23,7 +23,6 @@ li a:hover {
 
 .pageheigh {
     height: 100%;
-    /* margin-bottom: 0; */
 }
 
 .services {
@@ -45,7 +44,6 @@ li a:hover {
 
 .analyseResultsButton {
     background-color: #2b2d42;
-    font-family: 'Lucida Console', Courier, monospace;
     color: white;
     border-color: #2b2d42;
     border-radius: 2px;
@@ -58,14 +56,12 @@ li a:hover {
     background-color: #ffffff;
     border: 2px solid #2b2d42;
     color: #2b2d42;
-    font-family: 'Lucida Console', Courier, monospace;
     transition-duration: 0.4s;
 }
 
 
 .participateButton {
     background-color: #2b2d42;
-    font-family: 'Lucida Console', Courier, monospace;
     color: white;
     border-color: #2b2d42;
     border-radius: 2px;
@@ -79,8 +75,6 @@ li a:hover {
     background-color: #ffffff;
     border: 2px solid #2b2d42;
     color: #2b2d42;
-    font-family: 'Lucida Console', Courier, monospace;
-
 }
 
 .footer {
@@ -97,7 +91,6 @@ li a:hover {
     background-color: #2b2d42;
     border: 1px solid #ffffff;
     border-radius: 2px;
-    font-family: 'Lucida Console', Courier, monospace;
     color: #ffffff;
     width: 60%;
     height: 40px;
@@ -108,7 +101,6 @@ li a:hover {
 
 .footertext {
     color: white;
-    font-family: 'Lucida Console', Courier, monospace;
     text-decoration: none;
 }
 
