@@ -3,6 +3,8 @@ const mongoose = require('mongoose') // Needs an install
 const morgan = require('morgan') // Needs an install
 const bodyParser = require('body-parser') // Needs an install
 const UserRoute = require('./routes/user') // Needs an install
+const AuthRoute = require('./routes/Auth')
+const mainRoute = require('./routes/main')
 const path = require('path')
 const publicDirPath = path.join(__dirname, 'views/')
 mongoose.set('strictQuery', true)
@@ -34,7 +36,9 @@ app.use(bodyParser.urlencoded({extended: true}));
 app.use(bodyParser.json());
 app.use('/uploads', express.static('uploads')) //the first argument is a virtual path that does not reflect the real file structure
 app.use('/api/user', UserRoute) // again the first is a virtual path to call when your using the website when you want to use UserRoute
-app.get('/', (req, res) => {res.sendFile(publicDirPath + 'Home.html')})
+app.use('/api', AuthRoute)
+app.use('/', mainRoute)
+
 const PORT = process.env.PORT || 3000;
 
 app.listen(PORT, () => {

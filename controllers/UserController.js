@@ -37,7 +37,7 @@ const show = (req, res, next) => {
 
 // add new user
 // do we give token here ?
-const store = async (req, res, next) => {
+const store = (req, res, next) => {
     let user = new User({
         username: req.body.username,
         email: req.body.email,
@@ -46,11 +46,6 @@ const store = async (req, res, next) => {
     if(req.file) {
         user.avatar = req.file.path
     }
-
-    let userExists = await User.exists({email: user.email})
-    if (userExists) {
-         
-    } 
     
     user.save()
     
