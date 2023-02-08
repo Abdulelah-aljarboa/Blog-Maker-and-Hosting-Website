@@ -56,7 +56,7 @@ const login = (req, res, next) => {
                 if (result) {
                     let token = jwt.sign({name: user.username}, 'verySecretValue', {expiresIn: '1h'})
                     console.log('Login Succesful!');
-                    res.redirect('/Survey-page')
+                    res.redirect('/Articles-page')
                     // res.json({
                     //     message: "Login Successful!",
                     //     token

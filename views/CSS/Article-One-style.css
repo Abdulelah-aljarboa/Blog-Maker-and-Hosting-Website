@@ -7,6 +7,7 @@ header {
     padding-top: 10px;
     height: 60px;
     margin-bottom: 50px;
+    box-shadow: 0px 4px 5px grey;
 }
 
 .font {
@@ -30,51 +31,51 @@ li a:hover {
 
 }
 
-.surveyBox {
-    border-radius: 10px;
+.surveyFormBox {
+    border-radius: 5px;
     margin: 20px 0px 40px 0px;
     padding: 10px 0 20px 0px;
     background-color: #dfdfdf;
-    width: 90%;
-    height: 500px;
+    width: 60%;
+    height: 300px;
     position: relative;
-    box-shadow: 0px 5px 10px gray;
+
+}
+
+.surveyBoxContent {
+    margin: 20px 0px 40px 50px;
+    padding: 10px 0 20px 0px;
+    position: relative;
+}
+
+.surveyTitleBox {
+    border-radius: 5px;
+    margin: 20px 0px 40px 0px;
+    padding: 20px 0 20px 0px;
+    background-color: #dfdfdf;
+    width: 60%;
+    height: 100px;
+    position: relative;
+
 }
 
 
-.analyseResultsButton {
+
+.submitButton {
     background-color: #2b2d42;
     color: white;
     border-color: #2b2d42;
     border-radius: 2px;
-    width: 40%;
+    width: 30%;
     position: relative;
-    top: 35%;
+    bottom: 45%;
 }
 
-.analyseResultsButton:hover {
+.submitButton:hover {
     background-color: #ffffff;
     border: 2px solid #2b2d42;
     color: #2b2d42;
     transition-duration: 0.4s;
-}
-
-
-.participateButton {
-    background-color: #2b2d42;
-    color: white;
-    border-color: #2b2d42;
-    border-radius: 2px;
-    width: 40%;
-    position: relative;
-    top: 35%;
-    transition-duration: 0.4s;
-}
-
-.participateButton:hover {
-    background-color: #ffffff;
-    border: 2px solid #2b2d42;
-    color: #2b2d42;
 }
 
 .footer {
@@ -112,33 +113,4 @@ li a:hover {
 .surveyImage img {
     width: 100%;
     height: 100%;
-    border-radius: 10px;
 }
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-/* #logo {
-    margin: 10px;
-} */
-/* #nav1 {
-        background-color: bisque;
-        border-radius: 20px;
-        height: 30px;
-        width: 100px;
-        
-    } */

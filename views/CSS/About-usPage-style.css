@@ -2,6 +2,9 @@
     font-family: cairo;
 }
 .footer {
+    background-color: #2b2d42;
+    padding-top: 10px;
+    height: 60px;
     position: fixed;
     left: 0;
     bottom: 0;
@@ -12,9 +15,9 @@
 
 header {
     background-color: #2b2d42;
-    /* c7efcf */
     padding-top: 10px;
     height: 60px;
+    box-shadow: 0px 4px 5px grey;
 }
 
 .font {
@@ -25,13 +28,15 @@ header {
     color: #ffffff;
 }
 
-li a:hover {
-    background-color: #222333;
-}
-
 .maintext {
     font-size: 20pt;
     padding-top: 40%;
+    color: #2b2d42;
+    text-align: center;
+}
+
+.subtext {
+    font-size: 20pt;
     color: #2b2d42;
     text-align: center;
 }
@@ -41,12 +46,18 @@ li a:hover {
     /* margin-bottom: 0; */
 }
 
+.bat{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
 .button1 {
     background-color: #2b2d42;
     border: 2px solid #2b2d42;
     border-radius: 2px;
     color: #ffffff;
-    width: 100%;
+    width: 15rem;
     transition-duration: 0.4s;
 }
 
@@ -85,7 +96,11 @@ li a:hover {
     position: relative;
     padding-top: 50%;
 }
+li a {
+    border-radius: 10px;
+}
 
 li a:hover {
     background-color: #222333;
+    border-radius: 10px;
 }

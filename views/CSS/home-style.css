@@ -6,6 +6,7 @@ header {
     background-color: #2b2d42;
     padding-top: 10px;
     height: 60px;
+    box-shadow: 0px 4px 5px grey;
 }
 
 .font {
@@ -15,10 +16,15 @@ header {
 .font a:hover {
     color: #ffffff;
 }
+.subtext {
+    font-size: 20pt;
+    color: #2b2d42;
+    text-align: center;
+}
 
 .maintext {
     font-size: 20pt;
-    padding-top: 40%;
+    padding-top: 25%;
     color: #2b2d42;
     text-align: center;
 }
@@ -27,13 +33,19 @@ header {
     height: 100%;
 }
 
+.bat{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
 .button1 {
     background-color: #2b2d42;
     border: 2px solid #2b2d42;
     font-family: cairo;
     border-radius: 2px;
     color: #ffffff;
-    width: 100%;
+    width: 25rem;
     transition-duration: 0.4s;
 }
 
@@ -97,7 +109,13 @@ header {
 
 .footer {
     background-color: #2b2d42;
-    height: 75px;
+    padding-top: 10px;
+    height: 60px;
+    left: 0;
+    bottom: 0;
+    width: 100%;
+    color: white;
+    text-align: center;
 }
 
 .footertextbox {
@@ -122,8 +140,13 @@ header {
     text-decoration: none;
 }
 
+li a {
+    border-radius: 10px;
+}
+
 li a:hover {
     background-color: #222333;
+    border-radius: 10px;
 }
 
 
