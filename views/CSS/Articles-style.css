@@ -69,17 +69,18 @@ li a:hover {
 .participateButton {
     background-color: #2b2d42;
     color: white;
+    border: 2px solid #2b2d42;
     border-color: #2b2d42;
     border-radius: 2px;
     width: 40%;
     position: relative;
     top: 35%;
+    box-shadow: 0px 3px 5px grey;
     transition-duration: 0.4s;
 }
 
 .participateButton:hover {
     background-color: #ffffff;
-    border: 2px solid #2b2d42;
     color: #2b2d42;
 }
 
@@ -108,6 +109,11 @@ li a:hover {
     transition-duration: 0.4s;
     position: relative;
     left: 50px;
+}
+
+.newsletternbutton:hover {
+    background-color: #ffffff;
+    color: #2b2d42;
 }
 
 .footertext {

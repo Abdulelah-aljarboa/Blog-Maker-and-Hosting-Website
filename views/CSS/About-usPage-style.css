@@ -84,6 +84,11 @@ header {
     left: 50px;
 }
 
+.newsletternbutton:hover {
+    background-color: #ffffff;
+    color: #2b2d42;
+}
+
 .footertextbox {
     width: 150%;
 }

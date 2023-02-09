@@ -93,6 +93,7 @@ header {
     background-color: #2b2d42;
     color: white;
     border-color: #2b2d42;
+    border: 2px solid #2b2d42;
     border-radius: 2px;
     width: 40%;
     position: absolute;
@@ -132,6 +133,10 @@ header {
     transition-duration: 0.4s;
     position: relative;
     left: 50px;
+}
+.newsletternbutton:hover {
+    background-color: #ffffff;
+    color: #2b2d42;
 }
 
 .footertext {
