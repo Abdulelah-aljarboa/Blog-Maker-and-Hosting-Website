@@ -17,9 +17,14 @@ header {
 .font a:hover {
     color: #ffffff;
 }
+li a {
+    
+    border-radius: 10px;
+}
 
 li a:hover {
     background-color: #222333;
+    border-radius: 10px;
 }
 
 .pageheigh {
@@ -31,34 +36,49 @@ li a:hover {
 
 }
 
-.surveyFormBox {
-    border-radius: 5px;
+h5 {
+    /* background-color: #222333; */
+    overflow: auto;
+    width: 100%;
+    height: 100%;
+}
+
+.articleFormBox {
+    border-radius: 10px;
     margin: 20px 0px 40px 0px;
     padding: 10px 0 20px 0px;
     background-color: #dfdfdf;
     width: 60%;
-    height: 300px;
+    height: 50rem;
     position: relative;
+    box-shadow: 0 3px 10px grey;
 
 }
 
-.surveyBoxContent {
-    margin: 20px 0px 40px 50px;
-    padding: 10px 0 20px 0px;
+.articleBoxContent {
+    margin: 15px 0px 30px 0px;
+    padding: 10px 15px 20px 15px;
     position: relative;
+    width: 100%;
+    height: 100%;
 }
 
-.surveyTitleBox {
-    border-radius: 5px;
+.articleTitleBox {
+    border-radius: 10px;
     margin: 20px 0px 40px 0px;
     padding: 20px 0 20px 0px;
     background-color: #dfdfdf;
     width: 60%;
-    height: 100px;
+    height: 500px;
     position: relative;
+    box-shadow: 0 3px 10px grey;
 
 }
 
+.articleTitleBox h1{
+    margin-top: 15px;
+
+}
 
 
 .submitButton {
@@ -78,10 +98,22 @@ li a:hover {
     transition-duration: 0.4s;
 }
 
+body {
+    position: relative;
+    padding-bottom: 60px;
+    min-height: 98vh;
+}
+
 .footer {
     background-color: #2b2d42;
-    height: 75px;
-    margin-top: 100px;
+    padding-top: 10px;
+    height: 60px;
+    left: 0;
+    bottom: 0;
+    width: 100%;
+    color: white;
+    position: absolute;
+    text-align: center; 
 }
 
 .footertextbox {
@@ -91,7 +123,7 @@ li a:hover {
 .newsletternbutton {
     background-color: #2b2d42;
     border: 1px solid #ffffff;
-    border-radius: 2px;
+    border-radius: 10px;
     color: #ffffff;
     width: 60%;
     height: 40px;
@@ -100,17 +132,25 @@ li a:hover {
     left: 50px;
 }
 
+.newsletternbutton:hover {
+    background-color: #ffffff;
+    color: #2b2d42;
+}
+
 .footertext {
     color: white;
     text-decoration: none;
 }
 
-.surveyImage {
-    width: 80%;
-    height: 50%;
+
+.btn {
+ margin: 0 0 20px 25px;
+ box-shadow: 0 3px 10px grey;
 }
 
-.surveyImage img {
-    width: 100%;
-    height: 100%;
-}
+.btn {
+    background-color: #2b2d42;
+    width: 130px;
+   }
+
+   

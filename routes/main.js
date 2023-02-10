@@ -20,8 +20,13 @@ router.get("/Articles-page", (req, res) => {
 })
 router.get("/About-usPage", (req, res) => { res.render(publicDirPath + 'About-usPage.ejs') })
 router.get("/:id", (req, res) => {
-    console.log(req.params.id)
-    res.render(publicDirPath + 'Article-One.ejs')
+    Article.findOne({_id: req.params.id}, (err, article) => {
+       if(!err) {
+        res.render(publicDirPath + 'Article-One.ejs', {
+            article
+        })
+    }
+    })
 })
 router.get("/LoginPage", (req, res) => { res.render(publicDirPath + 'LoginPage.ejs') })
 router.get("/Sign-upPage", (req, res) => { res.render(publicDirPath + 'Sign-upPage.ejs') })

@@ -102,7 +102,7 @@ body {
 .newsletternbutton {
     background-color: #2b2d42;
     border: 1px solid #ffffff;
-    border-radius: 2px;
+    border-radius: 10px;
     color: #ffffff;
     width: 60%;
     height: 40px;
