@@ -13,13 +13,14 @@
 <body>
     <!-- header -->
     <%- include('header')-%>
+    <a href="/ArticleMaker-page" class="btn btn-primary">here</a>
         <% chunk.forEach((articles)=> {%>
             <div class="row">
                 <% articles.forEach((article)=> {%>
                     <div class="col-sm-6 col-md-3 mb-5" align="center">
                         <div class="articlrBox">
                             <div class="articleImage">
-                                <img src="Assets/image/1.jpg" alt="article image">
+                                <img src="<%= article.articleImg %>" alt="article image">
                             </div>
                             <h3>
                                 <%= article.articleName%>

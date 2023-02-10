@@ -3,7 +3,7 @@ const Article = require('../models/Article')
 
 //show the list of articles
 const index = (req, res, next) => {
-    article.find()
+    Article.find()
     .then(response => {
         res.json({
             response
@@ -21,7 +21,7 @@ const index = (req, res, next) => {
 //show single article
 const show = (req, res, next) => {
     let articleID = req.body.articleID
-    article.findById(articleID)
+    Article.findById(articleID)
     .then(response => {
         res.json({
             response
@@ -44,7 +44,7 @@ const store = (req, res, next) => {
         articleBody: req.body.articleBody
     })
     if(req.file) {
-        article.avatar = req.file.path
+        article.articleImg = req.file.path
     }
     
     article.save()
@@ -89,11 +89,10 @@ const update = (req, res, next) => {
 // delete article 
 const destroy = (req, res, next) => {
     let articleID = req.body.articleID
-    article.findByIdAndRemove(articleID)
-    .then(() => {
-        res.json({
-            message: 'Article Deleted Successfully!'
-        })
+    Article.findByIdAndRemove(articleID)
+    .then(response => {
+        console.log('Article Deleted Successfully!')
+        res.redirect('/Articles-page')
     })
     .catch(error => {
         res.json({

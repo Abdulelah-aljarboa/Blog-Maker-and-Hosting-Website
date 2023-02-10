@@ -11,7 +11,7 @@ const articleSchema = new Schema({
     articleBody: {
         type: String
     },
-    articleImage: {
+    articleImg: {
         type: String
     }
     
