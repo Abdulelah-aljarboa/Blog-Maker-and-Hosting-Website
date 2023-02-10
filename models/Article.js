@@ -8,12 +8,13 @@ const articleSchema = new Schema({
     articleDescription: {
         type: String
     },
-    articleImage: {
-        type: String
-    },
     articleBody: {
         type: String
+    },
+    articleImage: {
+        type: String
     }
+    
     
 }, { timestamps: true })
 

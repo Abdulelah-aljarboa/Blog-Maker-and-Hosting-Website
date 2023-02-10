@@ -13,19 +13,33 @@
 <body>
     <!-- header -->
     <%- include('header')-%>
-        <div class="row">
-            <div class="col-sm-6 col-md-3 mb-5" align="center">
-                <div class="articlrBox">
-                    <div class="articleImage">
-                        <img src="Assets/image/1.jpg" alt="article image">
+        <% chunk.forEach((articles)=> {%>
+            <div class="row">
+                <% articles.forEach((article)=> {%>
+                    <div class="col-sm-6 col-md-3 mb-5" align="center">
+                        <div class="articlrBox">
+                            <div class="articleImage">
+                                <img src="Assets/image/1.jpg" alt="article image">
+                            </div>
+                            <h3>
+                                <%= article.articleName%>
+                            </h3>
+                            <h5>
+                                <%= article.articleDescription%>
+                            </h5>
+
+                            <button onclick="window.location.href = '<%= article.id %>' " class="viewButton">View</button>
+
+                        </div>
                     </div>
-                    <p>About Article</p>
-                    <button onclick="window.location.href = '/Article-One' " class="viewButton">View</button>
-                </div>
+                    <%})%>
             </div>
-        </div>
-        <!-- footer -->
-        <%- include('footer')-%>
+            <%})%>
+
+
+
+                <!-- footer -->
+                <%- include('footer')-%>
 </body>
 
 </html>
