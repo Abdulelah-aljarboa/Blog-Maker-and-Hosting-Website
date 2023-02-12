@@ -13,7 +13,6 @@
 <body>
     <!-- header -->
     <%- include('header')-%>
-    <a href="/ArticleMaker-page" class="btn btn-primary">here</a>
         <% chunk.forEach((articles)=> {%>
             <div class="row">
                 <% articles.forEach((article)=> {%>
@@ -22,14 +21,14 @@
                             <div class="articleImage">
                                 <img src="<%= article.articleImg %>" alt="article image">
                             </div>
-                            <h3>
+                            <h2 class="card-title">
                                 <%= article.articleName%>
-                            </h3>
-                            <h5>
+                            </h2>
+                            <div class="card-subtitle text-muted mb-2"> <%= article.createdAt.toLocaleDateString() %></div>
+                            <div class="card-text mb-2">
                                 <%= article.articleDescription%>
-                            </h5>
-
-                            <button onclick="window.location.href = '<%= article.id %>' " class="viewButton">View</button>
+                            </div>
+                            <button onclick="window.location.href = '<%= article.slug %>' " class="viewButton">View</button>
 
                         </div>
                     </div>

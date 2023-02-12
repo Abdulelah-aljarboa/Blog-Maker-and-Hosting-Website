@@ -1,19 +1,20 @@
 const Article = require('../models/Article')
-
-
+const path = require('path')
+const publicDirPath = path.join('./', '/uploads')
+const fs = require('fs')
 //show the list of articles
 const index = (req, res, next) => {
     Article.find()
-    .then(response => {
-        res.json({
-            response
+        .then(response => {
+            res.json({
+                response
+            })
         })
-    })
-    .catch(error => {
-        res.json({
-            message: 'An Error Occured!'
+        .catch(error => {
+            res.json({
+                message: 'An Error Occured!'
+            })
         })
-    })
 
 
 }
@@ -22,42 +23,44 @@ const index = (req, res, next) => {
 const show = (req, res, next) => {
     let articleID = req.body.articleID
     Article.findById(articleID)
-    .then(response => {
-        res.json({
-            response
+        .then(response => {
+            res.json({
+                response
+            })
         })
-    }) 
-    .catch(error => {
-        res.json({
-            message: 'An error Occured!'
+        .catch(error => {
+            res.json({
+                message: 'An error Occured!'
+            })
         })
-    })
 }
 
 
 // add new article
 // do we give token here ?
-const store = (req, res, next) => {
+const store = async (req, res, next) => {
+
     let article = new Article({
         articleName: req.body.articleName,
         articleDescription: req.body.articleDescription,
-        articleBody: req.body.articleBody
+        articleBody: req.body.articleBody,
+        createdAt: new Date()
     })
-    if(req.file) {
+    if (req.file) {
         article.articleImg = req.file.path
     }
-    
-    article.save()
-    
-    .then(response => {
-        console.log('Article Added Successfully!')
-        res.redirect('/Articles-page')
-    })
-    .catch(error => {
-        res.json({
-            message: 'An Error Occured!'
+
+    await article.save()
+
+        .then(response => {
+            console.log('Article Added Successfully!')
+            res.redirect(`/${article.slug}`)
         })
-    })
+        .catch(error => {
+            res.json({
+                message: 'An Error Occured!' + error
+            })
+        })
 }
 
 // update article
@@ -69,27 +72,34 @@ const update = (req, res, next) => {
         articleDescription: req.body.articleDescription,
         articleBody: req.body.articleBody,
     }
-    if(req.file) {
+    if (req.file) {
         updatedData.avatar = req.file.path
     }
 
-    article.findByIdAndUpdate(articleID, {$set: updatedData})
-    .then(() => {
-        res.json({
-            message: 'Article updated Successfully!'
+    article.findByIdAndUpdate(articleID, { $set: updatedData })
+        .then(() => {
+            res.json({
+                message: 'Article updated Successfully!'
+            })
         })
-    })
-    .catch(error => {
-        res.json({
-            message: 'An Error Occured!'
+        .catch(error => {
+            res.json({
+                message: 'An Error Occured!'
+            })
         })
-    })
 }
 
 // delete article 
-const destroy = (req, res, next) => {
-    let articleID = req.body.articleID
-    Article.findByIdAndRemove(articleID)
+const destroy = async (req, res, next) => {
+    //find the image first and delete it from local uploads folder
+    const article = await Article.findById(req.params.id)
+    fs.unlink(article.articleImg, (err) => {
+        if (err) {
+            throw err;
+        }
+    }) 
+    //normal find and delete
+    Article.findByIdAndRemove(req.params.id)
     .then(response => {
         console.log('Article Deleted Successfully!')
         res.redirect('/Articles-page')
@@ -98,7 +108,7 @@ const destroy = (req, res, next) => {
         res.json({
             message: 'An Error Occured!'
         })
-    })
+    })  
 }
 
 module.exports = {

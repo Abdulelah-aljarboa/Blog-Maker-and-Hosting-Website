@@ -21,6 +21,7 @@
                     <h1>
                         <%= article.articleName%>
                     </h1>
+                    <div class="card-subtitle text-muted mb-2"> <%= article.createdAt.toLocaleDateString() %></div>
                 </div>
             </div>
         </div>
@@ -28,12 +29,13 @@
             <div class="col" align="center">
                 <div class="articleFormBox" align="left">
                     <div class="articleBoxContent">
-                        <h5> <%= article.articleBody%> </h5>
-                        
+                         <%- article.sanitizedHtml%>
                     </div>
                 </div>
+                <form action="/api/article/<%= article.id %>?_method=DELETE" method="POST" class="d-inline">
+                    <button type="submit" class="btn btn-danger">Delete</button>
+                </form>
                 <a href="" class="btn btn-primary">Edit</a>
-                <a href="" class="btn btn-danger">Delete</a>
             </div>
             <!-- footer -->
             <%- include('footer')-%>
