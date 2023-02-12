@@ -76,7 +76,7 @@ const update = (req, res, next) => {
         updatedData.avatar = req.file.path
     }
 
-    article.findByIdAndUpdate(articleID, { $set: updatedData })
+    Article.findByIdAndUpdate(articleID, { $set: updatedData })
         .then(() => {
             res.json({
                 message: 'Article updated Successfully!'
