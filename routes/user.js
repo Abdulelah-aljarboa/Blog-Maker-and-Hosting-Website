@@ -6,7 +6,7 @@ const upload = require('../middleware/upload')
 
 router.get('/', UserController.index)
 router.post('/show', UserController.show)
-router.post('/store', upload.single('avatar'), UserController.store)
+router.post('/register', upload.single('avatar'), UserController.store)
 router.post('/update', UserController.update)
 router.post('/delete', UserController.destroy)
 

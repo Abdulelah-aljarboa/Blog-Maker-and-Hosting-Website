@@ -1,0 +1,48 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <title>Edit Blog</title>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0-alpha1/dist/css/bootstrap.min.css" rel="stylesheet"
+        integrity="sha384-GLhlTQ8iRABdZLl6O3oVMWSktQOp6b7In1Zl3/Jr59b6EGGoI1aFkw7cmDA6j6gD" crossorigin="anonymous">
+    <link rel="stylesheet" type="text/css" href="/CSS/Blogs-style.css">
+</head>
+<body>
+    <!-- header -->
+<%- include('header')-%>
+<div class="container">
+    <div class="row">
+        <div class="col-md-9 offset-md-2">
+            <h1 class="display-4">Edit Blog: </h1>
+            <form action="/api/blog/<%= blog.id %>?_method=PUT" method="POST" enctype="multipart/form-data">
+                <div class="form-group">
+                    <label for="blogName">Blog Name: </label>
+                    <input value="<%= blog.blogName %>" type="text" name="blogName" id="blogName" class="form-control" required>
+                </div>
+                <div class="form-group">
+                    <label for="blogDescription">Blog Description: </label>
+                    <textarea name="blogDescription" id="blogDescription" cols="30" rows="2" class="form-control" required><%= blog.blogDescription %></textarea>
+                </div>
+                <div class="form-group">
+                    <label for="blogBody">Blog Body: </label>
+                    <textarea name="blogBody" id="blogBody" cols="30" rows="4" class="form-control" required><%= blog.blogBody %></textarea>
+                </div>
+                <div class="form-group">
+                    <label for="blogImg">Blog Image: </label>
+                    <input value="<%= blog.blogImg %>" type="file"  name="blogImg" class="form-control" required><br>
+                </div>
+                <div class="form-group">
+                    <button type="submit" class="btn btn-primary">Upload</button>
+                </div>
+            </form>
+        </div>
+    </div>
+</div>
+
+
+
+<!-- footer -->
+<%- include('footer')-%>
+</body>
+</html>

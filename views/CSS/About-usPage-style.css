@@ -109,3 +109,10 @@ li a:hover {
     background-color: #222333;
     border-radius: 10px;
 }
+.row {
+    --bs-gutter-x: 0;
+}
+
+.log {
+    padding-right: 10px;
+}
