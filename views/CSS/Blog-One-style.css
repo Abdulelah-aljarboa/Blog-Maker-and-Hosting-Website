@@ -157,6 +157,9 @@ body {
     background-color: #2b2d42;
     width: 130px;
 }
+.row {
+    --bs-gutter-x: 0;
+}
 
 .log {
     padding-right: 10px;

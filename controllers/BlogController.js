@@ -104,11 +104,13 @@ const update = async (req, res, next) => {
 const destroy = async (req, res, next) => {
     //find the image first and delete it from local uploads folder
     let blog = await Blog.findById(req.params.id)
+    if (blog != null) {
     fs.unlink(blog.blogImg, (err) => {
         if (err) {
             throw err;
         }
     })
+}
     //normal find and delete
     Blog.findByIdAndRemove(req.params.id)
         .then(response => {
