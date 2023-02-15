@@ -13,6 +13,11 @@
 <%- include('header')-%>
 <div class="container">
     <div class="row">
+        <% if (message && message != "") { %>
+            <div class="alert alert-danger">
+                <%= message%>
+            </div>
+            <% } %>
         <div class="col-md-9 offset-md-2">
             <h1 class="display-4">Add New Blog Post: </h1>
             <form action="/api/blog/store" method="POST" enctype="multipart/form-data">

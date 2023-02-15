@@ -9,18 +9,23 @@ const dompurify = createDomPurify(new JSDOM().window)
 const blogSchema = new Schema({
     blogName: {
         type: String,
+        required: true
     },
     blogDescription: {
-        type: String
+        type: String,
+        required: true
     },
     blogBody: {
-        type: String
+        type: String,
+        required: true
     },
     blogImg: {
-        type: String
+        type: String,
+        required: true
     },
     createdAt: {
-        type: Date
+        type: Date,
+        default: new Date()
     },
     slug: {
         type: String,

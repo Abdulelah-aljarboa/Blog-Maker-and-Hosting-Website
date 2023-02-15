@@ -10,6 +10,8 @@ const BlogRoute = require('./routes/blog')
 const methodoverride = require('method-override');
 const path = require('path')
 const publicDirPath = path.join(__dirname, '/views')
+
+
 mongoose.set('strictQuery', true)
 mongoose.connect('mongodb://127.0.0.1:27017/database', {useNewUrlParser: true, useUnifiedTopology: true})
 
@@ -39,7 +41,7 @@ app.use(session({
     secret: 'lorem ipsum',
     resave: false,
     saveUninitialized: false,
-    cookie: {maxAge: 60000 * 15}
+    cookie: {maxAge: 60000 * 20}
 }))
 app.use(flash())
 app.use(methodoverride('_method'))

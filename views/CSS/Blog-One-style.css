@@ -50,6 +50,7 @@ img {
 }
 
 .blogFormBox {
+    display: flex;
     border-radius: 10px;
     margin: 20px 0px 40px 0px;
     padding: 10px 0 20px 0px;
@@ -163,4 +164,8 @@ body {
 
 .log {
     padding-right: 10px;
+}
+
+p img {
+    margin-left: 214px;
 }

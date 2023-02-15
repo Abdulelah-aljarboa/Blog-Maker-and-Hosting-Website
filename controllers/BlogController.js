@@ -53,7 +53,9 @@ const store = async (req, res, next) => {
 
         .then(response => {
             console.log('Blog Added Successfully!')
-            res.redirect(`/${blog.slug}`)
+            req.flash('info', 'New Blog Added Successfully!')
+            // res.redirect(`/${blog.slug}`)
+            res.redirect('/Blogs-page')
         })
         .catch(error => {
             res.json({
@@ -90,6 +92,7 @@ const update = async (req, res, next) => {
 
 
         .then(() => {
+            req.flash('info', 'Blog Updated!')
             console.log("Blog updated Successfully");
             res.redirect(`/${blog.slug}`)
         })
@@ -114,6 +117,7 @@ const destroy = async (req, res, next) => {
     //normal find and delete
     Blog.findByIdAndRemove(req.params.id)
         .then(response => {
+            req.flash('info', 'Blog Deleted!')
             console.log('Blog Deleted Successfully!')
             res.redirect('/Blogs-page')
         })

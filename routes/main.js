@@ -10,8 +10,11 @@ const Blog = require('../models/Blog');
 router.get("/LoginPage", (req, res) => { res.render('LoginPage') })
 router.get("/Sign-upPage", (req, res) => { res.render('Sign-upPage') })
 router.get("/About-usPage", (req, res) => { res.render('About-usPage') })
-router.get("/BlogMaker-page", (req, res) => { res.render('BlogMaker-page') })
-// router.get("/BlogEditor-page", (req, res) => { res.render('BlogEditor-page') })
+router.get("/BlogMaker-page", (req, res) => { 
+    res.render('BlogMaker-page', {
+        message: req.flash('error')
+    }) 
+})
 router.get("/", (req, res) => { res.render('Home') })
 router.get("/Blogs-page", (req, res) => {
     Blog.find({}, (err, blogs) => {
@@ -21,7 +24,8 @@ router.get("/Blogs-page", (req, res) => {
             chunk.push(blogs.slice(i, chunkSize + i))
         }
         res.render('Blogs-page', {
-            chunk
+            chunk : chunk,
+            message: req.flash("info")
         })
     }).sort({ createdAt: "desc" })
 
@@ -30,7 +34,9 @@ router.get("/:slug", async (req, res) => {
     const blog = await Blog.findOne({ slug: req.params.slug })
     if (blog != null) {
         res.render('Blog-One', {
-            blog
+            blog,
+            message: req.flash("info")
+            
         })
     } else {
         res.redirect('Blogs-page')
