@@ -13,6 +13,13 @@ which covers the front-end and the back-end
   # installations
   - install NodeJs From [Here](https://nodejs.org/en/download/)
   - install MongoDB from [Here]([https://nodejs.org/en/download/](https://www.mongodb.com/try/download/community))
-  - Make sure to run `npm install` 
-  make sure to clone the repository first,
-  then take the "data" folder and put 
+  - Make sure to run `npm install` for the first time to install all the dependencies
+  - take out tha `data` folder and place it in the mongodb local data path "should be in C:\\data"
+  
+  # SetUp
+  - the choosen ip for the website is 127.0.0.1 and the PORT is 3000
+  - the databe is in the 27017 PORT
+  - Run `npm start`
+  - go to 127.0.0.1 in your browser
+
+
