@@ -17,8 +17,8 @@ which covers the front-end and the back-end
   - take out tha `data` folder and place it in the mongodb local data path "should be in C:\\data"
   
   # SetUp
-  - the choosen ip for the website is 127.0.0.1 and the PORT is 3000
-  - the databe is in the 27017 PORT
+  - the choosen IP for the website is 127.0.0.1 and the PORT is 3000
+  - the database is in the 27017 PORT
   - Run `npm start`
   - go to 127.0.0.1 in your browser
 
