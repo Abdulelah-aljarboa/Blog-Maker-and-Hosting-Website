@@ -38,14 +38,10 @@ const show = (req, res, next) => {
 // add new user
 // do we give token here ?
 const store = (req, res, next) => {
-    let user = new User({
-        username: req.body.username,
-        email: req.body.email,
-        password: req.body.password
-    })
-    if(req.file) {
-        user.avatar = req.file.path
-    }
+    let user = new User()
+        user.username = req.body.username,
+        user.email = req.body.email,
+        user.password = user.hashPassword(req.body.password)
     
     user.save()
     

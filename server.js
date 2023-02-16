@@ -2,10 +2,12 @@ const express = require('express') // Needs an install
 const mongoose = require('mongoose') // Needs an install
 const morgan = require('morgan') // Needs an install
 const bodyParser = require('body-parser') // Needs an install
+const passport = require('passport')
+const passportSetup = require('./middleware/passport-setup')
+const flash = require('express-flash')
+const session = require('express-session')
 const UserRoute = require('./routes/user') // Needs an install
 const mainRoute = require('./routes/main')
-const flash = require('connect-flash')
-const session = require('express-session')
 const BlogRoute = require('./routes/blog')
 const methodoverride = require('method-override');
 const path = require('path')
@@ -43,7 +45,15 @@ app.use(session({
     saveUninitialized: false,
     cookie: {maxAge: 60000 * 20}
 }))
+app.use(passport.initialize())
+app.use(passport.session())
+app.get('*', (req, res, next) => {
+    res.locals.user = req.user || null
+    next()
+})
 app.use(flash())
+app.use(passport.initialize())
+app.use(passport.session())
 app.use(methodoverride('_method'))
 app.use(morgan('dev')); 
 app.use(bodyParser.urlencoded({extended: true}));
@@ -52,6 +62,7 @@ app.use('/uploads', express.static('uploads')) //the first argument is a virtual
 app.use('/api/user', UserRoute) // again the first is a virtual path to call when your using the website when you want to use UserRoute
 app.use('/api/blog', BlogRoute)
 app.use('/', mainRoute)
+
 
 const PORT = process.env.PORT || 3000;
 

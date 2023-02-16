@@ -28,18 +28,22 @@
                                     <div class="blogImage">
                                         <img src="<%= blog.blogImg %>" alt="blog image">
                                     </div>
-                                    <h2 class="card-title">
+                                    <h3 class="card-title">
                                         <%= blog.blogName%>
-                                    </h2>
+                                    </h3>
                                     <div class="card-subtitle text-muted mb-2">
                                         <%= blog.createdAt.toLocaleDateString() %>
                                     </div>
                                     <div class="card-text mb-2">
                                         <%= blog.blogDescription%>
                                     </div>
-                                    <button onclick="window.location.href = '<%= blog.slug %>' "
-                                        class="viewButton">View</button>
-
+                                    <% if (user) {%>
+                                        <button onclick="window.location.href = '<%= blog.slug %>' "
+                                            class="viewButton">View</button>
+                                        <% } else { %>
+                                            <button onclick="window.location.href = '/LoginPage' "
+                                                class="viewButton">View</button>
+                                                <% } %>
                                 </div>
                             </div>
                             <%})%>

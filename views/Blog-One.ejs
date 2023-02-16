@@ -42,11 +42,13 @@
                                 <%- blog.sanitizedHtml%>
                             </div>
                         </div>
-                        <form action="/api/blog/<%= blog.id %>?_method=DELETE" method="POST" class="d-inline">
-                            <button type="submit" class="btn btn-danger">Delete</button>
-                        </form>
-                        <a onclick="window.location.href = '/BlogEditor-page/<%= blog.id %>'"
-                            class="btn btn-primary">Edit</a>
+                        <% if (user.isAdmin==true || blog.author==user.id){ %>
+                            <a onclick="window.location.href = '/BlogEditor-page/<%= blog.id %>'"
+                                class="btn btn-primary">Edit</a>
+                            <form action="/api/blog/<%= blog.id %>?_method=DELETE" method="POST" class="d-inline">
+                                <button type="submit" class="btn btn-danger">Delete</button>
+                            </form>
+                            <% } %>
                     </div>
                     <!-- footer -->
                     <%- include('footer')-%>

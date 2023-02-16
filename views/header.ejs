@@ -11,14 +11,26 @@
                 <li class="nav-item"><a class="nav-link active font" href="/">Home</a></li>
                 <li class="nav-item"><a class="nav-link active font" href="/Blogs-page">Blogs</a></li>
                 <li class="nav-item"><a class="nav-link active font" href="/About-usPage">About us</a>
-                <li class="nav-item"><a class="nav-link active font" href="/BlogMaker-page" >Make New Blog</a></li>
+                    <% if (!user) {%>
+                <li class="nav-item"><a class="nav-link active font disabled" href="/BlogMaker-page" >Make New Blog</a></li>
+                <% } else { %>
+                <li class="nav-item"><a class="nav-link active font " href="/BlogMaker-page" >Make New Blog</a></li>
+                <% } %>
                 </li>
             </ul>
         </div>
+        <% if(!user) { %>
         <div class="col log">
             <ul class="nav justify-content-end ">
                 <li class="nav-item log"><a class="nav-link active font" href="/LoginPage">Login</a></li>
             </ul>
         </div>
+        <% }else { %>
+            <div class="col log">
+                <ul class="nav justify-content-end ">
+                    <li class="nav-item log"><a class="nav-link active font" href="/Logout">Logout</a></li>
+                </ul>
+            </div>
+        <% } %>
     </div>
 </header>

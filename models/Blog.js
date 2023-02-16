@@ -21,11 +21,14 @@ const blogSchema = new Schema({
     },
     blogImg: {
         type: String,
-        required: true
     },
     createdAt: {
         type: Date,
         default: new Date()
+    }, 
+    author: {
+        type: String,
+        required: true
     },
     slug: {
         type: String,
@@ -36,11 +39,11 @@ const blogSchema = new Schema({
         type: String,
         required: true
     }
-    
+
 })
-blogSchema.pre('validate', function(next) {
+blogSchema.pre('validate', function (next) {
     if (this.blogName) {
-        this.slug = slugify(this.blogName, {lower: true, strict: true})
+        this.slug = slugify(this.blogName, { lower: true, strict: true })
     }
     if (this.blogBody) {
         this.sanitizedHtml = dompurify.sanitize(marked(this.blogBody))
@@ -48,5 +51,5 @@ blogSchema.pre('validate', function(next) {
     next()
 })
 
-const Blog = mongoose.model('Atricle', blogSchema)
+const Blog = mongoose.model('Blog', blogSchema)
 module.exports = Blog

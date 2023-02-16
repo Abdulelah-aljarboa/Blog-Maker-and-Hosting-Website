@@ -30,7 +30,10 @@
                 </div>
                 <div class="form-group">
                     <label for="blogImg">Blog Image: </label>
-                    <input type="file"  name="blogImg" class="form-control" accept="image/png, image/jpeg" required><br>
+                    <input type="file"  name="blogImg" class="form-control" accept="image/png, image/jpeg" ><br>
+                </div>
+                <div class="form-group">
+                    <input type="hidden"  name="author" class="form-control" required value="<%= blog.author %>"><br>
                 </div>
                 <div class="form-group">
                     <button type="submit" class="btn btn-primary">Upload</button>

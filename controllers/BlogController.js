@@ -43,7 +43,8 @@ const store = async (req, res, next) => {
         blogName: req.body.blogName,
         blogDescription: req.body.blogDescription,
         blogBody: req.body.blogBody,
-        createdAt: new Date()
+        createdAt: new Date(),
+        author: req.body.author
     })
     if (req.file) {
         blog.blogImg = req.file.path
@@ -67,13 +68,16 @@ const store = async (req, res, next) => {
 // update blog
 const update = async (req, res, next) => {
 
-    //find the image first and delete it from local uploads folder
     let oldblog = await Blog.findById(req.params.id)
+
+    if (req.file) {
+    //find the image first and delete it from local uploads folder
     fs.unlink(oldblog.blogImg, (err) => {
         if (err) {
             throw err;
         }
     })
+}
     //normal find and delete
     await Blog.findByIdAndRemove(req.params.id)
 
@@ -82,7 +86,10 @@ const update = async (req, res, next) => {
         blogName: req.body.blogName,
         blogDescription: req.body.blogDescription,
         blogBody: req.body.blogBody,
-        createdAt: new Date()
+        createdAt: new Date(),
+        author: req.body.author,
+        blogImg: oldblog.blogImg
+
     })
     if (req.file) {
         blog.blogImg = req.file.path
@@ -98,7 +105,7 @@ const update = async (req, res, next) => {
         })
         .catch(error => {
             res.json({
-                message: 'An Error Occured!'
+                message: 'An Error Occured!' + error
             })
         })
 }

@@ -22,7 +22,7 @@ li a {
     border-radius: 10px;
 }
 
-li a:hover {
+.nav a:hover {
     background-color: #222333;
     border-radius: 10px;
 }
@@ -51,10 +51,10 @@ li a:hover {
     margin-top: 5px;
  }
 
- .articlrBox h5 {
+ .card-text  {
     overflow: hidden;
     width: 380px;
-    height: 150px; 
+    height: 100px; 
  }
 
 .viewButton {
@@ -62,7 +62,7 @@ li a:hover {
     color: white;
     border: 2px solid #2b2d42;
     border-color: #2b2d42;
-    border-radius: 2px;
+    border-radius: 10px;
     width: 40%;
     position: absolute;
     bottom: 15px;
@@ -72,8 +72,8 @@ li a:hover {
 }
 
 .viewButton:hover {
-    background-color: #ffffff;
-    color: #2b2d42;
+    background-color: #484b6d;
+    color: #ffffff;
 }
 
 body {
@@ -140,6 +140,10 @@ body {
     padding-right: 10px;
 }
 
+
+.disabled {
+    --bs-nav-link-disabled-color: black;
+}
 
 
 

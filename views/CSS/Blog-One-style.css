@@ -23,7 +23,7 @@ li a {
     border-radius: 10px;
 }
 
-li a:hover {
+.nav a:hover {
     background-color: #222333;
     border-radius: 10px;
 }
@@ -75,7 +75,7 @@ img {
     padding: 20px 0 20px 0px;
     background-color: #dfdfdf;
     width: 60%;
-    height: 500px;
+    min-height: 450px;
     position: relative;
     box-shadow: 0 3px 10px grey;
 
@@ -168,4 +168,8 @@ body {
 
 p img {
     margin-left: 214px;
+}
+
+.disabled {
+    --bs-nav-link-disabled-color: black;
 }

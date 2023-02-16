@@ -55,16 +55,15 @@ header {
 .button1 {
     background-color: #2b2d42;
     border: 2px solid #2b2d42;
-    border-radius: 2px;
+    border-radius: 10px;
     color: #ffffff;
     width: 15rem;
     transition-duration: 0.4s;
 }
 
 .button1:hover {
-    background-color: #ffffff;
-    border: 2px solid #2b2d42;
-    color: #2b2d42;
+    background-color: #484b6d;
+    color: #ffffff;
 }
 
 .footertext {
@@ -105,7 +104,7 @@ li a {
     border-radius: 10px;
 }
 
-li a:hover {
+.nav a:hover {
     background-color: #222333;
     border-radius: 10px;
 }
@@ -115,4 +114,8 @@ li a:hover {
 
 .log {
     padding-right: 10px;
+}
+
+.disabled {
+    --bs-nav-link-disabled-color: black;
 }
