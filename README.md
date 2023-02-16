@@ -12,7 +12,7 @@ which covers the front-end and the back-end
   
   # installations
   - install NodeJs From [Here](https://nodejs.org/en/download/)
-  - install MongoDB from [Here](https://nodejs.org/en/download/](https://www.mongodb.com/try/download/community))
+  - install MongoDB from [Here](https://www.mongodb.com/try/download/community))
   - Make sure to run `npm install` for the first time to install all the dependencies
   - take out tha `data` folder and place it in the mongodb local data path "should be in C:\\data"
   
