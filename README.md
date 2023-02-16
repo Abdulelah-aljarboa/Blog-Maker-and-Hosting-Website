@@ -11,6 +11,6 @@ which covers the front-end and the back-end
   - MongoDB
   
   # installations
-  install NodeJs From Here ![Here](https://nodejs.org/en/download/)
+  install NodeJs From Here [Here](https://nodejs.org/en/download/)
   make sure to clone the repository first,
   then take the "data" folder and put 
