@@ -27,4 +27,11 @@ users can view other blogs and theirs and also edit them or delete them if they 
   - Run `npm start`
   - go to 127.0.0.1 in your browser
 
-
+# Screen Shots
+![](./images/1.png)
+![]()
+![]()
+![]()
+![]()
+![]()
+![]()
